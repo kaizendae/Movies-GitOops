@@ -22,3 +22,15 @@ spec:
           envFrom:
             - configMapRef:
                 name: movies-backend-configs
+          livenessProbe:
+            httpGet:
+              path: /healthcheck
+              port: 5000
+            initialDelaySeconds: 5
+            periodSeconds: 5
+          readinessProbe:
+            httpGet:
+              path: /healthcheck
+              port: 5000
+            initialDelaySeconds: 5
+            periodSeconds: 5
