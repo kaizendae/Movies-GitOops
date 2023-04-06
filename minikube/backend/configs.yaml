@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: movies-backend-configs
+  namespace: movies
+data:
+  MOVIEREVIEWS_DB_URI: "mongodb+srv://kaizendae:daemon@moviesdemo.1upuoor.mongodb.net/?retryWrites=true&w=majority"
+  MOVIEREVIEWS_NS: "sample_mflix"
+  PORT: "5000"
