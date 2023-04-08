@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: frontend-test
+  namespace: inpt
+  labels:
+    app: frontend-test
+spec:
+  replicas: 3
+  selector:
+      matchLabels:
+        app: frontend-test
+  template:
+    metadata:
+      labels:
+        app: frontend-test
+    spec:
+      containers:
+        - name: frontend-test
+          image: random9deploy/webserver-demo:2.0
+          ports:
+            - containerPort: 80
+
