@@ -1,0 +1,13 @@
+apiVersion: image.toolkit.fluxcd.io/v1beta2
+kind: ImagePolicy
+metadata:
+  name: backend-image-policy
+  namespace: flux-system
+spec:
+  imageRepositoryRef:
+    name: backend-image # backend-image
+  filterTags:
+    pattern: '^[0-9]+'
+  policy:
+    numerical:
+      order: asc
