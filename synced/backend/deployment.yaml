@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: movies-backend
-          image: docker.io/random9deploy/movies-backend:33 # {"$imagepolicy": "flux-system:backend-image-policy"}
+          image: docker.io/random9deploy/movies-backend:32
           ports:
             - containerPort: 5000
           envFrom:
