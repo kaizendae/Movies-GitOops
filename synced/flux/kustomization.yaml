@@ -6,3 +6,4 @@ resources:
 - ImageAutomation.yaml
 - ImageRepo.yaml
 - ImagePolicy.yaml
+- ssh-sealed.yaml
